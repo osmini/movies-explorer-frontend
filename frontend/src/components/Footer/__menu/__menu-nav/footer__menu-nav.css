@@ -1,0 +1,15 @@
+.footer__menu-nav {
+  display: flex;
+  justify-content:space-between;
+
+  width: 186px;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__menu-nav {
+    flex-direction: column-reverse;
+    flex-direction: column;
+
+    text-align: center;
+  }
+}

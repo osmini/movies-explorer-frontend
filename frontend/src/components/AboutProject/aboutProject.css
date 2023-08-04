@@ -1,0 +1,22 @@
+.aboutProject{
+  min-height: 100%;
+  max-width: 1140px;
+
+  margin: 0 auto;
+  margin-top: 110px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .aboutProject {
+    max-width: 689px;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutProject {
+    max-width: 272px;
+    margin-top: 70px;
+  }
+}

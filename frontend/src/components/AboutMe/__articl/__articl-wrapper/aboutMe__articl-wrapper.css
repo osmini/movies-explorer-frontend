@@ -1,0 +1,13 @@
+.aboutMe__articl-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 66px;
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe__articl-wrapper {
+    margin-top: 60px;
+    flex-direction: column-reverse;
+  }
+}

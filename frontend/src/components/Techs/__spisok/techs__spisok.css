@@ -1,0 +1,34 @@
+.techs__spisok { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 90px);
+  gap: 10px;
+
+  max-width: 690px;
+
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  text-align: center;
+
+  list-style-type: none;
+
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__spisok {
+    margin-top: 83px;
+    margin-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__spisok {
+    max-width: 200px;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}

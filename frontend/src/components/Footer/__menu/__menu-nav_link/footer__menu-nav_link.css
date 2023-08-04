@@ -1,0 +1,17 @@
+.footer__menu-nav_link{
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__menu-nav_link {
+    font-size: 12px;
+
+    padding-top: 12px;
+  
+  }
+}

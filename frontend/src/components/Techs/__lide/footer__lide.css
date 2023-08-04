@@ -1,0 +1,29 @@
+.footer__lide {
+  max-width: 500px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 26px;
+
+  text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+  .footer__lide {
+    margin-top: 22px;
+
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__lide {
+    margin-top: 24px;
+
+    font-size: 11px;
+  }
+}

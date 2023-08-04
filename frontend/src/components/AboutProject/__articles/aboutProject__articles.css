@@ -1,0 +1,18 @@
+.aboutProject__articles{
+  display: flex;
+  justify-content:space-between;
+
+  margin-top: 70px;
+}
+
+
+@media screen and (max-width: 320px) {
+  .aboutProject__articles {
+    flex-direction:column;
+    justify-content: space-between;
+
+    margin-top: 60px;
+
+    height: 272px;
+  }
+}

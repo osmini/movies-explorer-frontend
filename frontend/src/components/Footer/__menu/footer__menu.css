@@ -1,0 +1,22 @@
+.footer__menu{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+  width: 100%;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__menu {
+    flex-direction: column;
+    flex-direction: column-reverse;
+
+    margin-top: 18px;
+
+  }
+}

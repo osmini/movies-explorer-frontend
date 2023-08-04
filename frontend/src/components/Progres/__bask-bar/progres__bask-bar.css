@@ -1,0 +1,13 @@
+.progres__bask-bar{
+  background-color: #3DDC84;
+  height: 36px;
+
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+

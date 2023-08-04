@@ -1,0 +1,22 @@
+.moviesCardList__button {
+  width: 320px;
+  height: 36px;
+
+  margin-top: 50px;
+  margin-bottom: 80px;
+
+  background-color: #202020;
+
+  border: 1px solid #424242;
+  border-radius: 6px;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .moviesCardList__button {
+    width: 240px;
+  }
+}

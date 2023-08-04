@@ -1,0 +1,14 @@
+.aboutProject__title{
+  font-weight: 400;
+  font-size: 22px;
+
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 320px) {
+  .aboutProject__title {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+}

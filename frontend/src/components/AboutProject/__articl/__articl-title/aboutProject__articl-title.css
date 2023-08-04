@@ -1,0 +1,12 @@
+.aboutProject__articl-title {
+  font-weight: 400;
+  font-size: 20px;
+
+  margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .aboutProject__articl-title {
+    font-size: 18px;;
+  }
+}

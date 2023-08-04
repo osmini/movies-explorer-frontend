@@ -1,0 +1,15 @@
+.progres__bask{
+  min-width: 228px;
+}
+
+@media screen and (max-width: 768px) {
+  .progres__bask {
+    min-width: 140px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .progres__bask {
+    min-width: 100px;
+  }
+}

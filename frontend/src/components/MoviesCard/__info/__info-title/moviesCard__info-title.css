@@ -1,0 +1,12 @@
+.moviesCard__info-title {
+  font-weight: 500;
+  font-size: 13px;
+
+  margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .moviesCard__info-title {
+    font-size: 12px;
+  }
+}

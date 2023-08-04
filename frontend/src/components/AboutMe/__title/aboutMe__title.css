@@ -1,0 +1,21 @@
+.aboutMe__title {
+  font-weight: 400;
+  font-size: 22px;
+
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__title {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe__title {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+}

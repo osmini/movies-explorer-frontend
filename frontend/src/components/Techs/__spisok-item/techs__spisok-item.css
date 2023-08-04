@@ -1,0 +1,33 @@
+.techs__spisok-item {
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+  width: 90px;
+  height: 60px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  background-color: #303030;
+
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__spisok-item {
+    width: 84px;
+    height: 57px;
+
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .techs__spisok-item {
+
+    font-size: 12px;
+  }
+}

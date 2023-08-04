@@ -1,0 +1,19 @@
+.profile__form {
+  max-width: 410px;
+
+  margin: 0 auto;
+  margin-top: 123px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .profile__form {
+    margin-top: 96px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__form {
+    margin-top: 80px;
+  }
+}

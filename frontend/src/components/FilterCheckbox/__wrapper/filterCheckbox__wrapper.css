@@ -1,0 +1,17 @@
+.filterCheckbox__wrapper {
+  display: inline-block;
+  justify-content: center;
+
+  width: 36px;
+  height: 20px;
+
+  margin-right: 12px;
+  
+  position: relative;
+}
+
+@media screen and (max-width: 320px) {
+  .filterCheckbox__wrapper {
+      margin-right: 13px;
+  }
+}

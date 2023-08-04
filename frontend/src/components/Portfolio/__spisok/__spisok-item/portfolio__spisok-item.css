@@ -1,0 +1,32 @@
+.portfolio__spisok-item {
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top: 20px;
+  margin-bottom: 19px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.portfolio__spisok-item:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__spisok-item {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__spisok-item {
+    font-size: 18px;
+  }
+}
