@@ -8,4 +8,5 @@
 
 IP-адрес 51.250.99.196
 
-Backend https://osmimesto.nomoredomains.work/
+МАКЕТ dark-2
+Frontend https://osmimesto.nomoredomains.work/
