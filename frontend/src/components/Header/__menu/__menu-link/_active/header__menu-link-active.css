@@ -3,6 +3,8 @@
   height: 32px;
   width: 100px;
 
+  margin-bottom: 4px;
+
   font-size: 14px;
   line-height: 22px;
   font-weight: 500;
@@ -18,3 +20,10 @@
   cursor: pointer;
 }
 
+
+@media screen and (max-width:768px) {
+  .header__menu-link-active {
+    background-image: url("../../../../../images/burger.svg");
+    display: none;
+  }
+}

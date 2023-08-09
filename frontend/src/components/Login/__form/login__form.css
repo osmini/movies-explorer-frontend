@@ -5,15 +5,15 @@
 
   padding-top: 20px;
 
-  width: 396px;
-  height: 383px;
+  max-width: 396px;
+  min-height: 400px;
 
 }
 
 @media (max-width:320px){
   .login__form {
     max-width: 260px;
-    min-height: 468px;
+    min-height: 488px;
 
     padding-top: 60px;
     text-align: left;

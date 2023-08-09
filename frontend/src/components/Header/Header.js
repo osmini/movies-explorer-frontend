@@ -26,7 +26,7 @@ function Header(){
   return (
     <header className="header">
       <Link to='/'>
-        <img className="header__logo" src={logo} alt="логотип Movies"/>
+        <img className="header__logo hoverBatton" src={logo} alt="логотип Movies"/>
       </Link>
 
       {location.pathname != "/" &&  <Navigation />}
@@ -38,7 +38,10 @@ function Header(){
           (
             <Link  to='/profile' className="header__menu-link header__menu-link-active hoverBatton">Аккаунт</Link>
           )}
-          <button className="header__menu-burger" onClick={handleOpenBurger}></button>
+
+          {location.pathname != "/" && 
+            <button className="header__menu-burger hoverBatton" type="button" onClick={handleOpenBurger}></button>
+          }
 
           <Burger
             isOpenBurger={burgerMenu}
@@ -46,8 +49,6 @@ function Header(){
           />
 
       </nav>
-
-      
 
     </header>
   );

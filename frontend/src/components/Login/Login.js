@@ -101,14 +101,15 @@ function Login (props){
     setFormValid(false);
   }, [location.pathname]);
   
-  return (
+  return (    
+  <main id="main">
     <section className= "login" aria-label="форма попапа">
 
       <Link to='/'>
-        <img className="login__logo" src={logo} alt="логотип Movies"/>
+        <img className="login__logo hoverBatton" src={logo} alt="логотип Movies"/>
       </Link>
 
-      <h2 className="login__title">{title}</h2>
+      <h1 className="login__title">{title}</h1>
 
       <form className="login__form" >
         <div className="login__form-wrapper" >
@@ -117,28 +118,28 @@ function Login (props){
             <>
               <label className="login__form-ladel" >Имя</label>
               {(nameDirty && nameError) ? ( 
-              <input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="text"  name="login_name" />) : 
-              (<input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="login__form-input" type="text"  name="login_name" />)}
+              <input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="text"  name="login_name" placeholder='Кирилл'required/>) : 
+              (<input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="login__form-input" type="text"  name="login_name" placeholder='Кирилл' required/>)}
               {(nameDirty && nameError) && <span className="login__form-error">{nameError}</span>}
             </>) : null
           }
 
           <label className="login__form-ladel">E-mail</label>
           {(emailDirty && emailError) ? ( 
-          <input onChange={e => emailHandler(e)} value={emailImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="Email"  name="login_email" />) : 
-          (<input onChange={e => emailHandler(e)} value={emailImput} onBlur={e => blueHandler(e)} className="login__form-input" type="Email"  name="login_email" />)}
+          <input onChange={e => emailHandler(e)} value={emailImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="Email"  name="login_email" placeholder='ewt@mail.ya'required/>) : 
+          (<input onChange={e => emailHandler(e)} value={emailImput} onBlur={e => blueHandler(e)} className="login__form-input" type="Email"  name="login_email" placeholder='ewt@mail.ya' required/>)}
           {(emailDirty && emailError) && <span className="login__form-error">{emailError}</span>}
 
           <label className="login__form-ladel">Пароль</label>
           {(passwordDirty && passwordError) ? ( 
-          <input onChange={e => passwordHandler(e)} value={passwordImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="password"  name="login_password" />) : 
-          (<input onChange={e => passwordHandler(e)} value={passwordImput} onBlur={e => blueHandler(e)} className="login__form-input" type="password"  name="login_password" />)}
+          <input onChange={e => passwordHandler(e)} value={passwordImput} onBlur={e => blueHandler(e)} className="login__form-input login__form-input_inputErrorBorder" type="password"  name="login_password" placeholder='Ваш пароль' required/>) : 
+          (<input onChange={e => passwordHandler(e)} value={passwordImput} onBlur={e => blueHandler(e)} className="login__form-input" type="password"  name="login_password" placeholder='Ваш пароль' required/>)}
           {(passwordDirty && passwordError) && <span className="login__form-error">{passwordError}</span>}
         </div>
 
         { !formValid ? 
-        ( <button disabled='false' className="login__form-button login__form-button_inactive hoverBatton" type="submit" aria-label="Кнопка регистрации">{buttonTitle}</button>) : 
-        (<button disabled='true' className="login__form-button hoverBatton" type="submit" aria-label="Кнопка регистрации">{buttonTitle}</button>) }
+        ( <button disabled={false} className="login__form-button login__form-button_inactive hoverBatton" type="submit" aria-label="Кнопка регистрации">{buttonTitle}</button>) : 
+        (<button disabled={true} className="login__form-button hoverBatton" type="submit" aria-label="Кнопка регистрации">{buttonTitle}</button>) }
 
       </form>
 
@@ -147,6 +148,7 @@ function Login (props){
       </p>
 
     </section>
+  </main>
   );
 
 }

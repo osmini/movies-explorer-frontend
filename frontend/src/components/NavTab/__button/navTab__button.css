@@ -24,6 +24,8 @@
 @media screen and (max-width: 320px) {
   .navTab__button {
     width: 82px;
+    height: 26px;
+
     font-size: 10px;
   }
 }

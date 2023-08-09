@@ -7,7 +7,7 @@ function SavedMovies(props){
   const {titleButonCard} = props;
 
   return (
-
+  <main id="main">
     <section className="savedMovies">
 
       <SearchForm />
@@ -17,6 +17,7 @@ function SavedMovies(props){
       />
 
     </section>
+  </main>
   );
 }
 

@@ -20,5 +20,7 @@
 @media (max-width:320px){
   .login__form-button {
     font-size: 12px;
+
+    margin-top: 90px;
   }
 }

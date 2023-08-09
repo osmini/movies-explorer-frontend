@@ -17,8 +17,11 @@
   outline:none;
 }
 
-
-
 .profile__input::placeholder {
   color: #fff;
+}
+
+.profile__input:focus {
+  border: 1px solid #3DDC84;
+  border-radius: 6px;
 }

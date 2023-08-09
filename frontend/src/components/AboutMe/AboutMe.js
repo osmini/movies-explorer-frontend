@@ -8,11 +8,11 @@ function AboutMe(){
   // возвращаем jsx разметку компонента
   return (
     <section className="aboutMe" id="aboutMe">
-      <h3 className="aboutMe__title">Студент</h3>
+      <h2 className="aboutMe__title">Студент</h2>
 
       <DecoreLineGrey />
 
-      <article className="aboutMe__articl-wrapper">
+      <div className="aboutMe__articl-wrapper">
         <div className="aboutMe__articl">
           <h1 className="aboutMe__articl-title">Кирилл</h1>
           <p className="aboutMe__articl-liad">Фронтенд-разработчик, 27 лет</p>
@@ -20,9 +20,9 @@ function AboutMe(){
           <Link to="https://github.com/osmini" className="aboutMe__articl-link hoverLink" target="_blank">Github</Link>
         </div>
 
-        <img className="aboutMe__img" src={me} alt="Моя фотография" ></img>
+        <img className="aboutMe__img" src={me} alt="Фотография Кирилла Осминина, веб-разработчика" ></img>
 
-      </article>
+      </div>
 
     </section>
   );

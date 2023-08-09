@@ -6,8 +6,8 @@
   height: 21px;
 
   position: relative;
-  right: -128px;
-  top: -188px;
+  right: -130px;
+  top: -185px;
 
   border: none;
   border-radius: 30px;
@@ -18,9 +18,16 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .moviesCard__button {
+    right: -118px;
+    top: -176px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .moviesCard__button {
-    right: -108px;
-    top: -185px;
+    right: -103px;
+    top: -160px;
   }
 }

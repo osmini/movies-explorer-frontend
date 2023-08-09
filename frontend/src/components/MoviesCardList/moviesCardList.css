@@ -1,4 +1,17 @@
 .moviesCardList {
-  text-align: center;
+  max-width: 1140px;
+
+  margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .moviesCardList {
+    max-width: 704px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .moviesCardList {
+    max-width: 300px;
+  }
+}

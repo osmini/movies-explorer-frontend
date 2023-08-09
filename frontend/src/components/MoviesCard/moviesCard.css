@@ -3,8 +3,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .moviesCardg {
-    max-width: 768px;
+  .moviesCard {
+    max-width: 339px;
   }
 }
 

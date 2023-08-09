@@ -13,15 +13,15 @@ function AboutProject(){
       <DecoreLineGrey />
 
       <section className="aboutProject__articles">
-        <article className="aboutProject__articl">
+        <div className="aboutProject__articl">
           <h3 className="aboutProject__articl-title">Дипломный проект включал 5 этапов</h3>
           <p className="aboutProject__articl-text">Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
-        </article>
+        </div>
 
-        <article className="aboutProject__articl">
+        <div className="aboutProject__articl">
           <h3 className="aboutProject__articl-title">На выполнение диплома ушло 5 недель</h3>
           <p className="aboutProject__articl-text">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
-        </article>
+        </div>
       </section>
 
       <Progres />

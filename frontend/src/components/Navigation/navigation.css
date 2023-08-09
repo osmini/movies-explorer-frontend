@@ -2,6 +2,9 @@
   font-weight: 400;
   font-size: 13px;
 
+  margin-bottom: 6px;
+  margin-left: 63px;
+
   width: 212px;
 
   display: flex;
@@ -12,7 +15,8 @@
 
 @media screen and (max-width: 768px) {
   .navigation {
-    visibility: hidden;
+    display: none;
   }
 }
+
 

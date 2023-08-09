@@ -3,20 +3,20 @@
   max-width: 1140px;
 
   margin: 0 auto;
-  margin-top: 110px;
+  margin-top: 113px;
 
 }
 
 @media screen and (max-width: 768px) {
   .aboutProject {
-    max-width: 689px;
-    margin-top: 90px;
+    max-width: 668px;
+    margin-top: 93px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .aboutProject {
-    max-width: 272px;
+    max-width: 282px;
     margin-top: 70px;
   }
 }

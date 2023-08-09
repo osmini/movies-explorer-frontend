@@ -3,8 +3,9 @@
   font-size: 22px;
 
   margin: 0;
-  margin-top: 100px;
+  margin-top: 110px;
   margin-bottom: 23px;
+  letter-spacing: -1px;
 }
 
 @media screen and (max-width: 768px) {
@@ -16,6 +17,8 @@
 @media screen and (max-width: 320px) {
   .aboutMe__title {
     margin-top: 70px;
+    margin-bottom: 28px;
+
     font-size: 18px;
   }
 }

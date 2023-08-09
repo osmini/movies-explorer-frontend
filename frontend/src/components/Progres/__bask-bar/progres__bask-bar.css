@@ -1,4 +1,4 @@
-.progres__bask-bar{
+.progres__bask-bar {
   background-color: #3DDC84;
   height: 36px;
 
@@ -11,3 +11,8 @@
   color: #000;
 }
 
+@media screen and (max-width: 320px) {
+  .progres__bask-bar {
+    font-size: 11px;
+  }
+}

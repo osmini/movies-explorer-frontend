@@ -1,25 +1,21 @@
 .header{
   height: 74px;
-  min-width: 1140px;
+  width: 95%;
   background-color: #202020;
+
+  padding-bottom: 20px;
 
   display: flex;
   justify-content:space-between;
   align-items:center;
+  flex-grow: 1;
 
 
   margin: 0 auto;
-  
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    min-width: 689px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .header {
-    min-width: 272px;
+    width: 92%;
   }
 }

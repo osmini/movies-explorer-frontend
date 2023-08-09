@@ -19,10 +19,9 @@
   background-color: #3DDC84;
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 320px) {
   .header__menu-link {
-    background-image: url("../../../../images/burger.svg");
-    display: none;
+    height: 26px;
+    width: 54px;
   }
 }

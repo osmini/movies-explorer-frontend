@@ -1,6 +1,9 @@
 .footer__menu-nav_link{
   font-weight: 400;
   font-size: 13px;
+
+  padding-left: 10px;
+
   color: #fff;
 
   text-decoration: none;

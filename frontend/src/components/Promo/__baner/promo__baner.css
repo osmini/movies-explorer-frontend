@@ -3,6 +3,7 @@
 
   font-weight: 400;
   font-size: 50px;
+  letter-spacing: -2px;
   text-align: center;
 
   padding-top: 160px;
@@ -13,12 +14,21 @@
 
 @media screen and (max-width: 768px) {
   .promo__baner {
+    max-width: 630px;
+
     font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 48px;
+
+    padding-top: 355px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .promo__baner {
     font-size: 29px;
+    line-height: 39px;
+
+    padding-top: 210px;
   }
 }

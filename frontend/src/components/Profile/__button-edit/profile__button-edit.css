@@ -2,7 +2,7 @@
   display: block;
 
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 202px;
 
   background-color: #202020;
 
@@ -17,13 +17,13 @@
 
 @media screen and (max-width: 768px) {
   .profile__button-edit {
-    margin-top: 210px;
+    margin-top: 193px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__button-edit {
-    margin-top: 379px;
+    margin-top: 364px;
     font-size: 12px;
   }
 }

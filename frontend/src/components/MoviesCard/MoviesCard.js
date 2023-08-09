@@ -2,13 +2,13 @@ import React from 'react';
 import movies_1 from '../../images/1.jpg';
 
 function MoviesCard(props){
-  const {titleButonCard} = props;
+  const {titleButonCard, altMovies} = props;
 
   return (
 
     <article className="moviesCard">
 
-      <img className="moviesCard__img" src={movies_1} alt="Фильм"/>
+      <img className="moviesCard__img" src={movies_1} alt={altMovies}/>
       <button  className="moviesCard__button hoverBatton" type="button" aria-label="кнопка удалить">{titleButonCard}</button>
 
       <div className="moviesCard__info">

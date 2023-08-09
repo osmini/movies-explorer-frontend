@@ -2,10 +2,11 @@
   display: inline-block;
   justify-content: center;
 
-  width: 36px;
-  height: 20px;
+  width: 32px;
+  height: 15px;
 
-  margin-right: 12px;
+  margin-top: 3px;
+  margin-right: 14px;
   
   position: relative;
 }

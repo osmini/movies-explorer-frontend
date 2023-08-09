@@ -8,7 +8,7 @@ function Techs(){
   return (
     <section className="techs" id="techs">
       <div className="techs__wripper">
-        <h3 className="techs__title">Технологии</h3>
+        <h2 className="techs__title">Технологии</h2>
 
         <DecoreLineGrey />
 

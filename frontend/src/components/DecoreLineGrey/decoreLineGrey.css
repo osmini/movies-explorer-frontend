@@ -1,5 +1,17 @@
-.decoreLineGrey{
+.decoreLineGrey {
   border-bottom: 1px solid #DADADA;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .decoreLineGrey {
+    max-width: 708px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .decoreLineGrey {
+    max-width: 292px;
+  }
 }

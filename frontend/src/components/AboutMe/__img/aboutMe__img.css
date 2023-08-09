@@ -12,14 +12,10 @@
 
 @media screen and (max-width: 768px) {
   .aboutMe__img {
-    width: 255px;
-    height: 307px;
+    width: 293px;
+    height: 352px;
+
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .aboutMe__img {
-    width: 293px;
-    height: 352px;
-  }
-}

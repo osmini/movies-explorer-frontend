@@ -1,20 +1,17 @@
 .portfolio__spisok-img {
-  width: 29px;
-  height: 60px;
+  width: 18px;
+  height: 30px;
 
+  object-position: center;
   display: block;
+
+  padding-right: 5px;
 }
 
-@media screen and (max-width: 768px) {
-  .portfolio__spisok-img {
-    width: 27px;
-    height: 60px;
-  }
-}
 
 @media screen and (max-width: 320px) {
   .portfolio__spisok-img {
-    width: 18px;
-    height: 28px;
+    width: 10px;
+    height: 21px;
   }
 }

@@ -3,17 +3,17 @@
   font-size: 24px;
 
   margin: 0;
-  margin-top: 74px;
+  margin-top: 55px;
 }
 
 @media screen and (max-width: 768px) {
   .profile__title {
-    margin-top: 236px;
+    margin-top: 217px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__title {
-    margin-top: 70px;
+    margin-top: 51px;
   }
 }
