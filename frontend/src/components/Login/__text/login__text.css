@@ -11,7 +11,7 @@
 
 @media (max-width:768px){
   .login__text {
-    font-size: 12px;
+    margin-top: 18px;
     padding-bottom: 232px;
   }
 }
@@ -19,6 +19,8 @@
 @media (max-width:320px){
   .login__text {
     font-size: 12px;
+
+    margin-top: 14px;
     padding-bottom: 30px;
   }
 }

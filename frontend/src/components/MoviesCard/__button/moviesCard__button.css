@@ -20,8 +20,30 @@
 
 @media screen and (max-width: 768px) {
   .moviesCard__button {
-    right: -118px;
-    top: -176px;
+    right: -35%;
+    top: -76%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .moviesCard__button {
+    right: -40%;
+    top: -85%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .moviesCard__button {
+    right: -38%;
+    top: -80%;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .moviesCard__button {
+    right: -37%;
+    top: -78%;
   }
 }
 

@@ -1,4 +1,4 @@
-.footer{
+.footer {
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
@@ -10,3 +10,8 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 92%;
+  }
+}

@@ -1,6 +1,23 @@
 .searchForm__form {
-  width: 94%;
+  max-width: 100%;
   margin: 0 auto;
-
 }
 
+@media screen and (max-width: 1140px) {
+  .searchForm__form {
+    max-width: 83%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .searchForm__form {
+    max-width: 94%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchForm__form {
+    max-width: 290px;
+  }
+}

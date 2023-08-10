@@ -2,8 +2,8 @@
   display: inline-block;
   justify-content: center;
 
-  width: 32px;
-  height: 15px;
+  width: 33px;
+  height: 13px;
 
   margin-top: 3px;
   margin-right: 14px;
@@ -13,6 +13,6 @@
 
 @media screen and (max-width: 320px) {
   .filterCheckbox__wrapper {
-      margin-right: 13px;
+      margin-right: 22px;
   }
 }

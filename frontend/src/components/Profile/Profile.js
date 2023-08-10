@@ -1,9 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'; // импортируем Routes
 
-import DecoreLine from '../DecoreLine/DecoreLine';
-
-
 function Profile(){
 
   return (
@@ -16,7 +13,7 @@ function Profile(){
           <span className="profile__date">Имя</span>
           <input className="profile__input" type="text" name="profile_input-name"  placeholder="Кирилл"/>
         </div>
-        <DecoreLine />
+
         <div className="profile__wrapper-input"> 
           <span className="profile__date">E-mail</span>
           <input className="profile__input" type="text" name="profile_input-email"  placeholder="pochta@yandex.ru"/>

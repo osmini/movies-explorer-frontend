@@ -1,6 +1,4 @@
-import DecoreLineGrey  from '../DecoreLineGrey/DecoreLineGrey';
 import Progres  from '../Progres/Progres';
-
 
 // в даном компоненте мы не принимаем props аргумент
 function AboutProject(){
@@ -9,8 +7,6 @@ function AboutProject(){
   return (
     <section className="aboutProject" id="aboutProject">
       <h2 className="aboutProject__title">О проекте</h2>
-
-      <DecoreLineGrey />
 
       <section className="aboutProject__articles">
         <div className="aboutProject__articl">

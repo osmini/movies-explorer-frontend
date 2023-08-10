@@ -1,6 +1,3 @@
-import DecoreLineGrey  from '../DecoreLineGrey/DecoreLineGrey';
-
-
 // в даном компоненте мы не принимаем props аргумент
 function Techs(){
 
@@ -9,8 +6,6 @@ function Techs(){
     <section className="techs" id="techs">
       <div className="techs__wripper">
         <h2 className="techs__title">Технологии</h2>
-
-        <DecoreLineGrey />
 
         <h2 className="techs__heder">7 технологий</h2>
         <p className="footer__lide">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>

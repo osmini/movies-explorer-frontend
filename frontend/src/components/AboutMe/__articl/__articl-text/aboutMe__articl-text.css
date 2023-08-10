@@ -8,6 +8,7 @@
 @media screen and (max-width: 768px) {
   .aboutMe__articl-text {
     font-size: 14px;
+    line-height: 18px;
 
     margin-top: 10px;
   }

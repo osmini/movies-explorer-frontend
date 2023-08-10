@@ -4,12 +4,17 @@
   letter-spacing: -1px;
 
   margin: 0;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid #DADADA;
+  max-width: 1140px;
 }
 
 @media screen and (max-width: 320px) {
   .aboutProject__title {
     font-size: 18px;
     margin-bottom: 28px;
+    padding-bottom: 28px;
   }
 }
+

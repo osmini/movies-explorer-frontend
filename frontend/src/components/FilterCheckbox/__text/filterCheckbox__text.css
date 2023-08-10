@@ -13,5 +13,6 @@
 
   .filterCheckbox__text {
       font-size: 11px;
+      margin-top: 4px;
   }
 }

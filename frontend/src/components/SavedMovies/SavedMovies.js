@@ -1,5 +1,4 @@
 import SearchForm from '../SearchForm/SearchForm';
-import DecoreLine from '../DecoreLine/DecoreLine';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function SavedMovies(props){
@@ -11,7 +10,7 @@ function SavedMovies(props){
     <section className="savedMovies">
 
       <SearchForm />
-      <DecoreLine />
+
       <MoviesCardList 
         titleButonCard = {titleButonCard}
       />

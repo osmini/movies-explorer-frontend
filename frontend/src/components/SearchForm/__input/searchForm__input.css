@@ -1,9 +1,10 @@
 .searchForm__input {
-  width: 1086px;
+  width: 1160px;
   height: 50px;
 
   padding: 0 20px;
-  margin-right: 9px;
+
+  margin-top: 2px;
 
   background-color: #2F2F2F;
 

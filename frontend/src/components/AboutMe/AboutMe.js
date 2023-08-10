@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'; // импортируем Routes
 
-import DecoreLineGrey  from '../DecoreLineGrey/DecoreLineGrey';
 import me from '../../images/me.jpg';
 
 function AboutMe(){
@@ -9,8 +8,6 @@ function AboutMe(){
   return (
     <section className="aboutMe" id="aboutMe">
       <h2 className="aboutMe__title">Студент</h2>
-
-      <DecoreLineGrey />
 
       <div className="aboutMe__articl-wrapper">
         <div className="aboutMe__articl">

@@ -1,10 +1,6 @@
 @import url(./vendor/normalize.css); /*сброс стандартных стилей*/
 @import url(./vendor/fonts.css); /*подключение шрифтов*/
 
-/*decoreLine*/
-@import url(./components/DecoreLine/decoreLine.css); 
-@import url(./components/DecoreLineGrey/decoreLineGrey.css); 
-
 /*hoverBatton*/
 @import url(./components/HoverBatton/hoverBatton.css);
 /*hoverLink*/

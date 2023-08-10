@@ -7,11 +7,12 @@
   margin-bottom: 20px;
 
   text-align: center;
+
 }
 
 @media screen and (max-width: 768px) {
   .footer__prevue {
-    margin-top: 79px;
+    margin-top: 104px;
     margin-bottom: 20px;
   }
 }

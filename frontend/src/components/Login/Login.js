@@ -35,12 +35,12 @@ function Login (props){
     }
   }
 
-  //отслеживаем что ввели в поле password
+  //валидация что ввели в поле password
   const nameHandler = (e) => {
     setNameImput(e.target.value);
     
-    if (e.target.value.length<2){
-      setNameError('Длина имени должна быть более 1 символов');
+    if (e.target.value.length<2 || e.target.value.length>8){
+      setNameError('Длина имени должна быть более 2 и менее 9 символов');
       if (!e.target.value){
         setNameError('Имя не может быть пустым');
       }
@@ -49,7 +49,7 @@ function Login (props){
     }
   }
 
-  //отслеживаем что ввели в поле email
+  //валидация что ввели в поле email
   const emailHandler = (e) => {
     setEmailImput(e.target.value);
     const rexEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/;
@@ -61,12 +61,12 @@ function Login (props){
     }
   }
 
-  //отслеживаем что ввели в поле password
+  //валидация что ввели в поле password
   const passwordHandler = (e) => {
     setPasswordImput(e.target.value);
     
-    if (e.target.value.length<2){
-      setPasswordError('Длина пароля должна быть более 2 символов');
+    if (e.target.value.length<2 || e.target.value.length>8){
+      setPasswordError('Длина пароля должна от 2 до 8 символов');
       if (!e.target.value){
         setPasswordError('Пароль не может быть пустым');
       }

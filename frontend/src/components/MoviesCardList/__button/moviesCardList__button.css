@@ -21,12 +21,14 @@
 @media screen and (max-width: 768px) {
   .moviesCardList__button {
     margin-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 57px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .moviesCardList__button {
     width: 240px;
+
+    margin-bottom: 81px;
   }
 }

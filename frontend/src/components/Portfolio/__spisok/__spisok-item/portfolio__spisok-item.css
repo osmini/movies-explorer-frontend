@@ -9,7 +9,9 @@
   align-items:center;
 
   margin-top: 30px;
-  margin-bottom: 25px;
+  padding-bottom: 26px;
+
+  border-bottom: 1px solid #424242;
 
   cursor: pointer;
 
@@ -19,6 +21,12 @@
 .portfolio__spisok-item:first-child {
   margin-top: 0;
 }
+
+.portfolio__spisok-item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 
 @media screen and (max-width: 768px) {
   .portfolio__spisok-item {
@@ -31,6 +39,6 @@
     font-size: 18px;
 
     margin-top: 27px;
-    margin-bottom: 22px;
+    padding-bottom: 22px;
   }
 }

@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom'; // импортируем Routes
 
-import DecoreLine  from '../DecoreLine/DecoreLine';
-
 // в даном компоненте мы не принимаем props аргумент
 function Footer(){
 
@@ -9,8 +7,6 @@ function Footer(){
   return (
     <footer className="footer">
       <p className="footer__prevue"> Учебный проект Яндекс.Практикум х BeatFilm. </p>
-
-      <DecoreLine />
 
       <div className="footer__menu">
         <p className="footer__menu-copyraite">&#169; {(new Date().getFullYear())}</p>
