@@ -17,8 +17,8 @@
     max-width: 630px;
 
     font-size: 40px;
-    letter-spacing: -2px;
-    line-height: 48px;
+    letter-spacing: -3%;
+    line-height: 51px;
 
     padding-top: 355px;
   }
@@ -28,7 +28,9 @@
   .promo__baner {
     font-size: 29px;
     line-height: 39px;
+    letter-spacing: -1px;
 
-    padding-top: 210px;
+    padding-top: 217px;
+    padding-bottom: 149px;
   }
 }

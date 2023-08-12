@@ -5,7 +5,7 @@
 
   width: 100%;
 
-  padding-top: 19px;
+  padding-top: 5px;
   margin-bottom: 20px;
 
   text-align: center;
@@ -19,6 +19,5 @@
     flex-direction: column-reverse;
 
     margin-top: 2px;
-
   }
 }

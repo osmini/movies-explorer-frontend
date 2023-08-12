@@ -8,12 +8,13 @@
 
 @media screen and (max-width: 768px) {
   .profile__title {
-    margin-top: 217px;
+    margin-top: 222px;
+    letter-spacing: 1px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__title {
-    margin-top: 51px;
+    margin-top: 55px;
   }
 }

@@ -11,16 +11,9 @@
   color: #EE3465;
   text-decoration: none;
 }
-  
-@media screen and (max-width: 768px) {
-  .profile__button-out {
-    margin-bottom: 269px;
-  }
-}
 
 @media screen and (max-width: 320px) {
   .profile__button-out {
     font-size: 12px;
-    margin-bottom: 40px;
   }
 }

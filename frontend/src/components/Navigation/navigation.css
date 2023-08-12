@@ -2,15 +2,15 @@
   font-weight: 400;
   font-size: 13px;
 
-  padding-top: 10px;
-  margin-bottom: 6px;
-  margin-left: 63px;
+  margin-left: 25px;
 
   width: 212px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  list-style-type: none
 }
 
 @media screen and (max-width: 768px) {

@@ -11,7 +11,7 @@ function Burger({isOpenBurger, onCloseBurger}) {
 
 			<button className="burger__close-button hoverBatton" type="button" onClick={onCloseBurger}/>
 
-			<nav className="burger__wrapper">
+			<ul className="burger__wrapper">
 				<Link className={`burger__link hoverLink ${location.pathname === "/" ? "burger__link_active" : ""}`}  to="/" onClick={onCloseBurger}>
 					Главная
 				</Link>
@@ -28,7 +28,7 @@ function Burger({isOpenBurger, onCloseBurger}) {
 					Аккаунт
 				</Link>
 
-			</nav>
+			</ul>
 		</section>
 	);
 }

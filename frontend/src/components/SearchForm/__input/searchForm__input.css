@@ -1,10 +1,8 @@
 .searchForm__input {
-  width: 1160px;
+  width: 98%;
   height: 50px;
 
   padding: 0 20px;
-
-  margin-top: 2px;
 
   background-color: #2F2F2F;
 
@@ -22,8 +20,39 @@
   border: 1px solid #3DDC84;
 }
 
+@media screen and (max-width: 1140px) {
+  .searchForm__input {
+    width: 96%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .searchForm__input {
+    width: 94%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .searchForm__input {
+    width: 94%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .searchForm__input {
+    width: 90%;
+    padding-right: 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .searchForm__input {
+    height: 44px;
+    width: 81%;
+
     padding: 0 13px;
   }
 }

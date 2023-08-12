@@ -1,0 +1,9 @@
+.profile__input-input_inputErrorBorder {
+  border: 1px solid #EE3465;
+  border-radius: 6px;
+}
+
+.profile__input-input_inputErrorBorder:focus {
+  border: 1px solid #EE3465;
+  border-radius: 6px;
+}

@@ -13,6 +13,7 @@
   .aboutProject__articl-text {
     font-size: 12px;
     margin-top: 22px;
+    line-height: 19px;
   }
 }
 
@@ -21,6 +22,6 @@
     font-size: 11px;
     margin-top: 14px;
 
-    line-height: 17px;
+    line-height: 16px;
   }
 }

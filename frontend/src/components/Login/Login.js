@@ -35,7 +35,7 @@ function Login (props){
     }
   }
 
-  //валидация что ввели в поле password
+  //валидация что ввели в поле имя
   const nameHandler = (e) => {
     setNameImput(e.target.value);
     

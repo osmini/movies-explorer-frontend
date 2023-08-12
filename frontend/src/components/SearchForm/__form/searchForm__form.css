@@ -1,23 +1,28 @@
 .searchForm__form {
-  max-width: 100%;
+  max-width: 99%;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1000px) {
   .searchForm__form {
-    max-width: 83%;
+    max-width: 99%;
   }
 }
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .searchForm__form {
-    max-width: 94%;
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .searchForm__form {
+    width: 94%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .searchForm__form {
-    max-width: 290px;
+    max-width: 310px;
   }
 }

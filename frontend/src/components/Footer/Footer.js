@@ -11,10 +11,10 @@ function Footer(){
       <div className="footer__menu">
         <p className="footer__menu-copyraite">&#169; {(new Date().getFullYear())}</p>
 
-        <nav className="footer__menu-nav">
+        <ul className="footer__menu-nav">
           <Link to="https://practicum.yandex.ru/" className="footer__menu-nav_link hoverLink" target="_blank">Яндекс.Практикум</Link>
           <Link to="https://github.com/osmini" className="footer__menu-nav_link hoverLink" target="_blank">Github</Link>
-        </nav>
+        </ul>
 
       </div>
 

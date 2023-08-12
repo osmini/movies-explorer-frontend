@@ -5,7 +5,7 @@
   width: 320px;
   height: 36px;
 
-  margin-top: 78px;
+  margin-top: 74px;
   margin-bottom: 100px;
 
   background-color: #202020;
@@ -21,7 +21,7 @@
 @media screen and (max-width: 768px) {
   .moviesCardList__button {
     margin-top: 60px;
-    margin-bottom: 57px;
+    margin-bottom: 54px;
   }
 }
 
@@ -29,6 +29,7 @@
   .moviesCardList__button {
     width: 240px;
 
-    margin-bottom: 81px;
+    margin-top: 61px;
+    margin-bottom: 80px;
   }
 }

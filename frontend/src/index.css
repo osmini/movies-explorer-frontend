@@ -125,6 +125,8 @@
   @import url(./components/Profile/__form/profile__form.css);
     @import url(./components/Profile/__wrapper-input/profile__wrapper-input.css);
       @import url(./components/Profile/__input/profile__input.css);
+        @import url(./components/Profile/__input/_inputErrorBorder/profile__input-input_inputErrorBorder.css);
+      @import url(./components/Profile/__error/profile__error.css);
       @import url(./components/Profile/__date/profile__date.css);
     @import url(./components/Profile/__button-edit/profile__button-edit.css);
   @import url(./components/Profile/__button-out/profile__button-out.css);

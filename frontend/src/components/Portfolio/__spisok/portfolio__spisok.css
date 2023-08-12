@@ -11,13 +11,13 @@
 
 @media screen and (max-width: 768px) {
   .portfolio__spisok {
-    padding-bottom: 77px;
+    padding-bottom: 75px;
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .portfolio__spisok {
-    padding-bottom: 70px;
+    padding-bottom: 72px;
   }
 }

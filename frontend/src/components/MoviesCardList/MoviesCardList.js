@@ -31,7 +31,6 @@ function MoviesCardList(props){
           altMovies = "Фильм5"
         />
 
-
       </ul>
       <button className="moviesCardList__button hoverBatton" type="button"  name="moviesCardList_button"  aria-label="Кнопка показать фильмы">Ещё</button>
 

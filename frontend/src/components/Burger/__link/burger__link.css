@@ -5,6 +5,11 @@
   color: #fff;
   
   text-decoration: none;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
   
+@media screen and (max-width: 320px) {
+  .burger__link {
+    margin-bottom: 21px;
+  }
+}  
