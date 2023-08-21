@@ -1,0 +1,19 @@
+.progres__front-bar {
+  background-color: #303030;
+  height: 36px;
+
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 320px) {
+  .progres__front-bar {
+    font-size: 11px;
+
+    padding-top: 1px;
+  }
+}

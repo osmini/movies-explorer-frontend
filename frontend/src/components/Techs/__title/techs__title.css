@@ -1,0 +1,32 @@
+.techs__title {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -1px;
+
+  max-width: 1140px;
+
+  margin: 0;
+  margin-top: 100px;
+  padding-bottom: 21px;
+  
+  text-align: left;
+
+  border-bottom: 1px solid #DADADA;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__title {
+    margin-top: 90px;
+    padding-bottom: 23px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__title {
+    margin-top: 50px;
+
+    font-size: 18px;
+    padding-bottom: 25px;
+
+  }
+}

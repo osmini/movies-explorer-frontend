@@ -1,0 +1,24 @@
+.techs__wripper {
+  max-width: 1140px;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin: 0 auto;
+
+  border: 1px solid #272727;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+  .techs__wripper {
+    margin-top: 91px;
+    max-width: 669px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__wripper {
+    max-width: 284px;
+  }
+}

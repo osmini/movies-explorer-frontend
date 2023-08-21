@@ -1,0 +1,11 @@
+.burger_active {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 4;
+  opacity: 1;
+  visibility: visible;
+
+}

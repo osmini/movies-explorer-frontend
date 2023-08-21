@@ -1,0 +1,15 @@
+.burger__link {
+  font-weight: 500;
+  font-size: 18px;
+
+  color: #fff;
+  
+  text-decoration: none;
+  margin-bottom: 26px;
+}
+  
+@media screen and (max-width: 320px) {
+  .burger__link {
+    margin-bottom: 21px;
+  }
+}  

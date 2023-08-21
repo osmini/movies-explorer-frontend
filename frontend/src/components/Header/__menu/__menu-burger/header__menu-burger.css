@@ -1,0 +1,26 @@
+.header__menu-burger {
+  display: none;
+
+  height: 44px;
+  width: 44px;
+
+  border: none;
+  background-repeat: no-repeat;
+
+  background-image: url(../../../../images/burger.svg);
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__menu-burger {
+    display: block;
+  }
+}

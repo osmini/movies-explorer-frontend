@@ -1,0 +1,30 @@
+.burger__close-button {
+  background-image: url(../../../images/button_close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+
+  width: 33px;
+  height: 33px;
+
+  border: none;
+  
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  padding: 0;
+
+  z-index: 4;
+
+  cursor: pointer;
+}
+  
+@media screen and (max-width: 320px) {
+  .burger__close-button {
+    top: 11px;
+    right: 11px;
+  
+  }
+}
+

@@ -1,0 +1,32 @@
+.filterCheckbox__tumbler {
+  background-color: #EBEBEB;
+
+  border-radius: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+.filterCheckbox__tumbler:before {
+  background-color: #F5F5F5;
+
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  content: "";
+  
+  width: 10px;
+  height: 10px;
+
+  transition: .4s;
+}

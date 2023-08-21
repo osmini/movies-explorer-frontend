@@ -1,0 +1,39 @@
+.techs__spisok { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 90px);
+  gap: 10px;
+
+  max-width: 690px;
+
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 99px;
+  margin-bottom: 100px;
+
+  text-align: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__spisok {
+    margin-top: 80px;
+    margin-bottom: 90px;
+    max-width: 648px;
+
+    gap: 3px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__spisok {
+    max-width: 220px;
+
+    margin-top: 51px;
+    margin-bottom: 70px;
+    column-gap: 3px;
+    row-gap: 10px;
+
+  }
+}

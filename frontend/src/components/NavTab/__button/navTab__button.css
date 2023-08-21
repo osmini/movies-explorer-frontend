@@ -1,0 +1,31 @@
+.navTab__button{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
+  height: 36px;
+  width: 96px;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+
+  border: none;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+
+  background-color: #303030;
+
+  cursor: pointer;
+  
+  text-decoration: none;
+}
+
+@media screen and (max-width: 320px) {
+  .navTab__button {
+    width: 82px;
+    height: 26px;
+
+    font-size: 10px;
+  }
+}

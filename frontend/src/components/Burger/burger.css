@@ -1,0 +1,21 @@
+.burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 520px;
+  height: 100%;
+
+  background-color: #202020;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: right 0.5s, visibility 0.5s, opacity 0.5s linear;
+}
+
+
+@media screen and (max-width: 320px) {
+  .burger {
+    width: 320px;
+  }
+}

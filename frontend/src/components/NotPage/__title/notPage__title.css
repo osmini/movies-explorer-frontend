@@ -1,0 +1,21 @@
+.notPage__title {
+  font-weight: 400;
+  font-size: 140px;
+
+  margin: 0;
+  margin-top: 246px;
+}
+
+@media screen and (max-width: 768px) {
+  .notPage__title {
+    margin-top: 411px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .notPage__title {
+    font-size: 80px;
+    
+    margin-top: 330px;
+  }
+}

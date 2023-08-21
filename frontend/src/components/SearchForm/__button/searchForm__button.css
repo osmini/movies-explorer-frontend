@@ -1,0 +1,19 @@
+.searchForm__button {
+  width: 44px;
+  height: 44px;
+
+  padding-top: 3px;
+
+  cursor: pointer;
+
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+@media screen and (max-width: 320px) {
+  .searchForm__button {
+    padding: 0;
+    padding-top: -4px;
+  }
+}

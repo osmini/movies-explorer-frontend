@@ -1,0 +1,26 @@
+.profile__button-edit {
+  display: block;
+
+  margin: 0 auto;
+
+  background-color: #202020;
+
+  border: none;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__button-edit {
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__button-edit {
+    font-size: 12px;
+  }
+}

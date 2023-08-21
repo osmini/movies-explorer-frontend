@@ -1,0 +1,25 @@
+.techs__heder {
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: -2px;
+
+  margin: 0;
+  margin-top: 90px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__heder {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__heder {
+    margin-top: 62px;
+    font-size: 30px;
+
+    letter-spacing: -1px;
+  }
+}

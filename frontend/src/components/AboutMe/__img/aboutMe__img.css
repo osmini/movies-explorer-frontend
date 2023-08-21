@@ -1,0 +1,29 @@
+.aboutMe__img {
+  display: block;
+
+  width: 270px;
+  height: 327px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__img {
+    width: 255px;
+    height: 307px;
+
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe__img {
+    width: 292px;
+    height: 352px;
+
+    margin: 0 auto;
+  }
+}

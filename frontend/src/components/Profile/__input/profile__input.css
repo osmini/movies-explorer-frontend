@@ -1,0 +1,27 @@
+.profile__input {
+  width: 400px;
+
+  font-weight: 400;
+  font-size: 11px;
+  color: #fff;
+
+  text-align: right;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  background-color: #202020;
+
+  border: none;
+
+  outline:none;
+}
+
+.profile__input::placeholder {
+  color: #fff;
+}
+
+.profile__input:focus {
+  border: 1px solid #3DDC84;
+  border-radius: 6px;
+}

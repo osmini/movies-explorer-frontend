@@ -1,0 +1,18 @@
+.aboutMe__articl-link {
+  margin-top: auto;
+
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+
+  text-decoration: none;
+
+}
+
+
+@media screen and (max-width: 320px) {
+  .aboutMe__articl-link {
+    margin-top: 57px;
+  }
+}

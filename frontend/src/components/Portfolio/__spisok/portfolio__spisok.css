@@ -1,0 +1,23 @@
+.portfolio__spisok {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  padding-bottom: 152px;
+
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__spisok {
+    padding-bottom: 75px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__spisok {
+    padding-bottom: 72px;
+  }
+}

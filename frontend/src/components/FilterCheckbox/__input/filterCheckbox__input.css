@@ -1,0 +1,16 @@
+
+.filterCheckbox__input {
+  opacity: 0;
+}
+
+.filterCheckbox__input:checked + .filterCheckbox__tumbler {
+  background-color: #3DDC84;
+}
+
+.filterCheckbox__input:checked + .filterCheckbox__tumbler:before {
+  transform: translateX(16px);
+
+  background-color: #fff;
+  
+  border: 1px solid #3DDC84;
+}

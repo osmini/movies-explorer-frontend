@@ -1,0 +1,28 @@
+.aboutProject__title{
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -1px;
+
+  margin: 0;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #DADADA;
+  max-width: 1140px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutProject__title {
+    padding-bottom: 21px;
+  }
+}
+
+
+
+@media screen and (max-width: 320px) {
+  .aboutProject__title {
+    font-size: 18px;
+
+    padding-bottom: 27px;
+  }
+}
+

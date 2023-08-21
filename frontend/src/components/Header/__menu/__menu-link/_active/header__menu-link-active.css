@@ -1,0 +1,30 @@
+.header__menu-link-active {
+
+  height: 32px;
+  width: 100px;
+
+  margin-bottom: 4px;
+  margin-top: 4px;
+
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+
+  border: none;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+
+  background-color: #313131;
+
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:768px) {
+  .header__menu-link-active {
+    background-image: url("../../../../../images/burger.svg");
+    display: none;
+  }
+}

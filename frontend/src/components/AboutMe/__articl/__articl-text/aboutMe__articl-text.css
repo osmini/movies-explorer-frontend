@@ -1,0 +1,26 @@
+.aboutMe__articl-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__articl-text {
+    font-size: 14px;
+    line-height: 18px;
+
+    margin-top: 9px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe__articl-text {
+    font-size: 11px;
+    line-height: 17px;
+
+    margin-top: 11px;
+
+  }
+}

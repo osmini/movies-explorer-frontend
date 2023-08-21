@@ -1,0 +1,10 @@
+.moviesCard {
+  max-width: 100%;
+}
+
+
+@media screen and (max-width: 320px) {
+  .moviesCard {
+    max-width: 300px;
+  }
+} 

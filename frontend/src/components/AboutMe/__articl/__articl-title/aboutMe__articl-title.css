@@ -1,0 +1,21 @@
+.aboutMe__articl-title {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__articl-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe__articl-title {
+    font-size: 30px;
+
+    margin-top: 40px;
+  }
+}

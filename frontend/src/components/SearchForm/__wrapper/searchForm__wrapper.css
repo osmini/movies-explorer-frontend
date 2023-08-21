@@ -1,0 +1,26 @@
+.searchForm__wrapper {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+  .searchForm__wrapper {
+    max-width: 99%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .searchForm__wrapper {
+    max-width: 98%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchForm__wrapper {
+    max-width: 310px;
+  }
+}

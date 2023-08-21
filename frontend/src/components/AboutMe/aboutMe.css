@@ -1,0 +1,19 @@
+.aboutMe {
+  min-height: 100%;
+  max-width: 1140px;
+
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe {
+    max-width: 668px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutMe {
+    max-width: 292px;
+  }
+}

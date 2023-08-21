@@ -1,0 +1,29 @@
+.burger__account-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+  width: 100px;
+
+  margin-top: 621px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+
+  border: none;
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  background-color: #313131;
+
+  cursor: pointer;
+}
+  
+@media screen and (max-width: 320px) {
+  .burger__account-link {
+    margin-top: 421px;
+  }
+}

@@ -1,0 +1,46 @@
+.portfolio__spisok-item {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -1px;
+  color: #fff;
+
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top: 28px;
+  padding-bottom: 26px;
+
+  border-bottom: 1px solid #424242;
+
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.portfolio__spisok-item:first-child {
+  margin-top: 0;
+}
+
+.portfolio__spisok-item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .portfolio__spisok-item {
+    font-size: 28px;
+
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__spisok-item {
+    font-size: 18px;
+
+    margin-top: 25px;
+    padding-bottom: 22px;
+  }
+}
