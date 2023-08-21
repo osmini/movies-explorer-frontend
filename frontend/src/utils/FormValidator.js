@@ -20,14 +20,12 @@ export class FormValidator {
 
   // слушатель события валидации
   _enableValidationListener() {
-    console.log(2);
     this._toggleButtonState(); // деактивация при первом выводе попап окна
     this._addListenersValid();
   };
 
   // очистить поля ошибки при открытии попап добавить место
   resetValidation() {
-    console.log(3);
     this._toggleButtonState(); 
 
     this._buttonElement.disabled = true;
@@ -41,7 +39,6 @@ export class FormValidator {
 
   // убрать класс с ошибкой полю ввода
   _hideInputError(formInput) {
-    console.log(4);
     this._errorElement = this._formValid.querySelector(`#${formInput.id}-error`);
     formInput.classList.remove(this._inputErrorBorder);
     this._errorElement.textContent = '';
@@ -50,7 +47,6 @@ export class FormValidator {
   
    // добавить класс с ошибкой полю ввода
   _showInputError(formInput, errorMessage) {
-    console.log(5);
     // Находим элемент ошибки внутри самой функции
     this._errorElement = this._formValid.querySelector(`#${formInput.id}-error`);
     formInput.classList.add(this._inputErrorBorder);
@@ -60,7 +56,6 @@ export class FormValidator {
 
   //добавить слушатели обработчики
   _addListenersValid() {
-    console.log(6);
     this._inputList.forEach((formInput) => {
       formInput.addEventListener('input', () => {
         
@@ -77,7 +72,6 @@ export class FormValidator {
 
   // проверка можно ли активировать кнопку или нет
   _hasInvalidInput() {
-    console.log(7);
     // проходим по этому массиву методом some
     return this._inputList.some((inputElement) => {
 
@@ -90,7 +84,6 @@ export class FormValidator {
 
   // активировать и  деактивировать кнопку
   _toggleButtonState() {
-    console.log(8);
     // Если есть хотя бы один невалидный инпут
     if (this._hasInvalidInput()) {
       // сделай кнопку неактивной

@@ -1,19 +1,40 @@
-import React from 'react';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function Movies(props){
-
-  const {titleButonCard} = props;
+  const {
+    getMoviesFromApi, 
+    setInputTitleMovies, 
+    setShortMovies, 
+    movies, 
+    preloder, 
+    shortMovies, 
+    inputTitleMovies, 
+    setMoviesPfilter, 
+    setMovies, 
+    handleLikeClick,
+    savedMovies
+  } = props;
 
   return (
     <main id="main">
       <section className="movies">
 
-        <SearchForm />
+        <SearchForm 
+          getMoviesFromApi = {getMoviesFromApi}
+          setInputTitleMovies = {setInputTitleMovies}
+          setShortMovies = {setShortMovies}
+          shortMovies = {shortMovies}
+          inputTitleMovies = {inputTitleMovies}
+          setMoviesPfilter = {setMoviesPfilter}
+          setMovies = {setMovies}
+        />
 
         <MoviesCardList 
-          titleButonCard = {titleButonCard}
+          preloder = {preloder}
+          movies = {movies}
+          handleLikeClick = {handleLikeClick}
+          savedMovies = {savedMovies}
         />
 
       </section>

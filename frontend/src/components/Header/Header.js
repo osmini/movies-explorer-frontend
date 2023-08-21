@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link, useLocation} from 'react-router-dom'; // импортируем Routes
 
 import logo from '../../images/logo.svg';
@@ -7,9 +7,11 @@ import Navigation  from '../Navigation/Navigation';
 import Burger  from '../Burger/Burger';
 
 
-function Header(){
+function Header(props){
+  const {loggenIn, userEmail, onSignOut} = props;
 
   const [burgerMenu, setBurgerMenu] = useState(false);
+  const [buttonHeader, setButtonHeader] = useState('');
 
   // подписка на новигацию
   const location = useLocation();
@@ -23,18 +25,27 @@ function Header(){
     setBurgerMenu(false);
   }
 
+  // состояние кнопки входа/выхода из учетки
+  useEffect(()=>{
+    if (loggenIn) {
+      setButtonHeader('Выйти');
+    } else {
+      setButtonHeader('Войти');
+    }
+  },[loggenIn]);
+
   return (
     <header className="header">
       <Link to='/'>
         <img className="header__logo hoverBatton" src={logo} alt="логотип Movies"/>
       </Link>
 
-      {location.pathname != "/" &&  <Navigation />}
+      {loggenIn &&  <Navigation />}
 
       <nav className="header__menu">
-          {location.pathname === "/" &&   <Link  to='/signup' className="header__menu-login hoverBatton">Регистрация</Link>}
+          {location.pathname === "/" &&   <Link  to={!loggenIn ? ('/signup'): ('/profile')}  className="header__menu-login hoverBatton">{loggenIn ? userEmail: 'Регистрация'}</Link>}
           {location.pathname === "/" ? (
-          <Link  to='/signin' className="header__menu-link hoverBatton">Войти</Link>):
+          <Link  to={!loggenIn ? ('/signin'): ('/')} className="header__menu-link hoverBatton" onClick={loggenIn ? onSignOut : null} >{buttonHeader}</Link>):
           (
             <Link  to='/profile' className="header__menu-link header__menu-link-active hoverBatton">Аккаунт</Link>
           )}
