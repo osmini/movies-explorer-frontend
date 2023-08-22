@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import { useCookies } from 'react-cookie';
-import {Routes, Route, useNavigate, useLocation} from 'react-router-dom'; // импортируем Routes
+import {Routes, Route, useNavigate, Navigate, useLocation} from 'react-router-dom'; // импортируем Routes
 
 import Header  from '../Header/Header';
 import Login from '../Login/Login';
@@ -40,7 +40,7 @@ function App() {
   const [moviesPfilterSave, setMoviesPfilterSave] = useState([]); //карточки фильмов c фильтром для сохранок
   const [savedMovies, setSavedMovies] = useState([]);  // сохранение фильма себе
   const [cookies] = useCookies(['jwt']); // читаем из куки
-  //const [title, setTitle] = useState(userName); // имя пользователя
+  const [formValid, setFormValid] = useState(false); // валидация формы
 
   // подписка на новигацию
   const location = useLocation();
@@ -57,6 +57,7 @@ function App() {
       handleTooltipPopupOpen(result);
       navigate('/signin');
       setRegAnsve('Вы успешно зарегистрировались!');
+      setFormValid(true);
     })
     .catch(() => {
       const result = {
@@ -65,12 +66,13 @@ function App() {
       };
       handleTooltipPopupOpen(result);
       setRegAnsve('Что-то прошло не так! Попробуйте ещё раз.');
+      setFormValid(true);
     })
+    
   }
 
   // запрос  на авторизацию
   function handleLogin(registerEmail, registerPassword){
-
     ApiAuth.postAutoriseUser(registerEmail, registerPassword)
     .then((data) =>{
       setLoggenIn(true);
@@ -85,6 +87,9 @@ function App() {
       };
       handleTooltipPopupOpen(result);
       setRegAnsve('Что-то прошло не так! Попробуйте ещё раз.');
+    })
+    .finally(() => {
+      setFormValid(true);
     })
   }
 
@@ -134,11 +139,26 @@ function App() {
   function handleUpdateUser(date) {
     ApiUsers.patchInfoUserForServer(date)
     .then((user) => {
-      setCurrentUser(user);
-      closeAllPopups();
+      setUserName(user.name);
+      setUserEmail(user.email);
+      const result = {
+        popup: true,
+        registr: true
+      };
+      handleTooltipPopupOpen(result);
+      setRegAnsve('Изменения внесены');
     })
     .catch((err) => {
+      const result = {
+        popup: true,
+        registr: false
+      };
+      handleTooltipPopupOpen(result);
+      setRegAnsve('Что-то прошло не так! Попробуйте ещё раз.');
       console.log(err);
+    })
+    .finally(() => {
+      setFormValid(true);
     })
   }
 
@@ -362,27 +382,35 @@ function App() {
     <Routes>
 
       <Route path="/signup" element={
-        <Login
-          name = 'registr'
-          title = 'Добро пожаловать!'
-          buttonTitle = 'Зарегистрироваться'
-          text = 'Уже зарегистрированы?'
-          textLink = 'Войти'
-          urlLink = '/signin'
-          handleRegistr = {handleRegistr}
-        />
+        loggenIn ? <Navigate to="/" /> : (
+          <Login
+            name = 'registr'
+            title = 'Добро пожаловать!'
+            buttonTitle = 'Зарегистрироваться'
+            text = 'Уже зарегистрированы?'
+            textLink = 'Войти'
+            urlLink = '/signin'
+            handleRegistr = {handleRegistr}
+            formValid = {formValid}
+            setFormValid = {setFormValid}
+          />
+        )
       }/>
 
       <Route path="/signin" element={
-        <Login
-          name = 'avtorize'
-          title = 'Рады видеть!'
-          buttonTitle = 'Войти'
-          text = 'Ещё не зарегистрированы?'
-          textLink = 'Регистрация'
-          urlLink = '/signup'
-          handleLogin = {handleLogin}
-        />
+        loggenIn ? <Navigate to="/" /> : (
+          <Login
+            name = 'avtorize'
+            title = 'Рады видеть!'
+            buttonTitle = 'Войти'
+            text = 'Ещё не зарегистрированы?'
+            textLink = 'Регистрация'
+            urlLink = '/signup'
+            handleLogin = {handleLogin}
+            formValid = {formValid}
+            setFormValid = {setFormValid}
+          />
+        )
       }/>
 
       <Route path="/" element={
@@ -436,7 +464,6 @@ function App() {
         element={
           <Profile 
             userName = {userName}
-            setUserName = {setUserName}
             userEmail = {userEmail}
             onSignOut = {onSignOut}
             handleUpdateUser = {handleUpdateUser}

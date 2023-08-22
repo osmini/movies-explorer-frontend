@@ -4,7 +4,7 @@ import {Link, useLocation} from 'react-router-dom'; // импортируем Ro
 import logo from '../../images/logo.svg';
 
 function Login (props){
-  const {name, title, buttonTitle, text, textLink, urlLink, handleRegistr, handleLogin} = props;
+  const {name, title, buttonTitle, text, textLink, urlLink, handleRegistr, handleLogin, formValid, setFormValid} = props;
 
   const [nameImput, setNameImput] = useState('');
   const [emailImput, setEmailImput] = useState('');
@@ -15,7 +15,6 @@ function Login (props){
   const [nameError, setNameError] = useState('Имя не может быть пустым');
   const [emailError, setEmailError] = useState('Емайл не может быть пустым');
   const [passwordError, setPasswordError] = useState('Пароль не может быть пустым');
-  const [formValid, setFormValid] = useState(false);
 
   // данные из формы регистрации
   const [registerName, setRegisterName] = useState('');
@@ -87,14 +86,14 @@ function Login (props){
   // доступ к кнопки при валидации
   useEffect (() => {
       if (location.pathname === "/signup"){
-        if (emailError || passwordError || nameError || nameImput==="" || emailImput===""  || passwordImput===""){
+        if ((emailError || passwordError || nameError || nameImput==="" || emailImput==="" || passwordImput==="")){
           setFormValid(false);
         } else {
-          setFormValid(true);
-        }
+            setFormValid(true);
+          }
       }
       if (location.pathname === "/signin"){
-        if (emailError || passwordError || emailImput===""  || passwordImput===""){
+        if (emailError || passwordError || emailImput===""  || passwordImput==="" ){
           setFormValid(false);
         } else {
           setFormValid(true);
@@ -116,6 +115,7 @@ function Login (props){
   function handleSubmitRegistr(evt) {
     // Запрещаем браузеру переходить по адресу формы
     evt.preventDefault();
+    setFormValid(false);
     handleRegistr(registerName, registerEmail, registerPassword)
   }
 
@@ -123,6 +123,7 @@ function Login (props){
   function handleSubmitAvtorize(evt) {
     // Запрещаем браузеру переходить по адресу формы
     evt.preventDefault();
+    setFormValid(false);
     handleLogin(registerEmail, registerPassword)
   }
 

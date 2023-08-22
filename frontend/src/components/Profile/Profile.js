@@ -4,17 +4,17 @@ import {useLocation} from 'react-router-dom'; // импортируем Routes
 
 function Profile(props){
 
-  const {userName, setUserName, userEmail, onSignOut, handleUpdateUser} = props;
+  const {userName, userEmail, onSignOut, handleUpdateUser} = props;
 
-  const [nameImput, setNameImput] = useState('');
-  const [emailImput, setEmailImput] = useState('');
+  const [nameImput, setNameImput] = useState(userName);
+  const [emailImput, setEmailImput] = useState(userEmail);
   const [nameDirty, setNameDirty] = useState(false);
   const [emailDirty, setEmailDirty] = useState(false);
   const [nameError, setNameError] = useState('Имя не может быть пустым');
   const [emailError, setEmailError] = useState('Емайл не может быть пустым');
   const [formValid, setFormValid] = useState(false);
-  //const [title, setTitle] = useState(userName);
-  const [email, setEmail] = useState(userEmail);
+
+  const rexEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/;
 
   // подписка на новигацию
   const location = useLocation();
@@ -34,43 +34,43 @@ function Profile(props){
   //валидация что ввели в поле имя
   const nameHandler = (e) => {
     setNameImput(e.target.value);
-    
-    if (e.target.value.length<2 || e.target.value.length>8){
-      setNameError('Длина имени должна быть более 2 и менее 9 символов');
-    } 
-    if (e.target.value === userName){
-      setNameError('Введенное имя совпадает с вашим прежним именем');
-    } else {
-      setNameError('');
-    }
   }
 
   //валидация что ввели в поле email
   const emailHandler = (e) => {
     setEmailImput(e.target.value);
-    const rexEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/;
-
-    if (!rexEmail.test(e.target.value)){
-      setEmailError('Некорректный email');
-    }
-    if (e.target.value === email){
-      setEmailError('Введенный email совпадает с вашим прежним email');
-    } else {
-      setEmailError('');
-    }
   }
 
   // доступ к кнопки при валидации
-  useEffect (() => {
-    if (location.pathname === "/profile"){
-      if (emailError || nameError || nameImput==="" || emailImput==="" ){
-        setFormValid(false);
-      } else {
+  useEffect(() => {
+    if (!rexEmail.test(emailImput)){
+      setEmailError('Некорректный email');
+    }
+    if (emailImput === userEmail){
+      setEmailError('Введенный email совпадает с вашим прежним email');
+    } 
+    if (emailImput != userEmail && rexEmail.test(emailImput)) {
+      setEmailError('');
+    }
+    if (nameImput.length < 2 || nameImput.length > 8) {
+      setNameError('Длина имени должна быть более 2 и менее 9 символов');
+    } 
+    if (nameImput === userName) {
+      setNameError('Введенное имя совпадает с вашим прежним именем');
+    } 
+    if (nameImput != userName && (nameImput.length > 1 && nameImput.length < 9)) {
+      setNameError('');
+    } 
+    if (location.pathname === "/profile") {
+
+      if ((!emailError && nameImput!='' && emailImput!='') || (!nameError && nameImput!='' && emailImput!='')) {
         setFormValid(true);
+      } else {
+        setFormValid(false);
       }
     }
-  }, [nameError, emailError])
-
+  }, [nameError, emailError, emailImput, nameImput, userName, userEmail]);
+  
   function handleSubmit(evt) {
     // Запрещаем браузеру переходить по адресу формы
     evt.preventDefault();
@@ -80,20 +80,7 @@ function Profile(props){
       name: nameImput,
       email: emailImput
     });
-
-    if (nameImput){
-      setUserName(nameImput);
-    }
-    setEmail(emailImput);
-    setNameImput("");
-    setEmailImput("");
   }
-
-  // Очистка значения поля ввода при загрузке компонента
-  useEffect(() => {
-    setNameImput("");
-    setEmailImput("");
-  }, [location.pathname]);
 
   return (
   <main id="main">
@@ -110,7 +97,7 @@ function Profile(props){
               (<input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="profile__input profile__input-input_inputErrorBorder" type="text" name="profile_input-name" required placeholder=""/>) : 
               (<input onChange={e => nameHandler(e)} value={nameImput} onBlur={e => blueHandler(e)} className="profile__input" type="text" name="profile_input-name" required placeholder=""/>)}
           </div>
-          {(nameDirty && nameError) && <span className="profile__error">{nameError}</span>}      
+          {(nameDirty && nameError) && <span className="profile__error">{nameError}</span>}     
 
           <div className="profile__wrapper-input"> 
             <span className="profile__date">E-mail</span>
