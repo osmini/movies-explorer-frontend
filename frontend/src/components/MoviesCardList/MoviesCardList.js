@@ -6,7 +6,7 @@ import Preloader from '../Preloader/Preloader';
 
 function MoviesCardList(props){
 
-  const {movies, preloder, handleLikeClick, handleDeleteClick, savedMovies} = props;
+  const {movies, preloder, handleLikeClick, handleDeleteClick, savedMovies, setDattonChange, dattonChange} = props;
 
   // подписка на новигацию
   const location = useLocation();
@@ -70,6 +70,8 @@ function MoviesCardList(props){
             handleDeleteClick={handleDeleteClick}
             savedMovies={savedMovies}
             key={location.pathname === "/movies" ? movie.id : movie._id }
+            setDattonChange = {setDattonChange}
+            dattonChange = {dattonChange}
           />
           ))}
         </ul>

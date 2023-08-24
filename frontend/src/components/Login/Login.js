@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 import {Link, useLocation} from 'react-router-dom'; // импортируем Routes
 
+import { rexEmail } from '../../data/data';
+
 import logo from '../../images/logo.svg';
 
 function Login (props){
@@ -58,7 +60,6 @@ function Login (props){
   //валидация что ввели в поле email
   const emailHandler = (e) => {
     setEmailImput(e.target.value);
-    const rexEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/;
 
     if (!rexEmail.test(e.target.value)){
       setEmailError('Некорректный email');

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {useLocation} from 'react-router-dom'; // импортируем Routes
 import find from '../../images/find.svg';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
@@ -23,6 +23,13 @@ function SearchForm(props){
 
   // подписка на новигацию
   const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/saved-movies') {
+      setInputTitleMoviesSave('');
+      setShortMoviesSave(false);
+    }
+  }, [location.pathname]); // пустой массив зависимостей для выполнения эффекта только при первичном монтировании
 
   //получаем данные из инпута 
   const titleMoviesHandler = (e) => {
@@ -75,7 +82,7 @@ function SearchForm(props){
     <section className="searchForm">
       <form className="searchForm__form" name='search_movies'>
         <div className="searchForm__wrapper">
-          <input className="searchForm__input"  type="search"   onChange={e => location.pathname === "/movies" ? titleMoviesHandler(e) : titleMoviesHandlerSave(e)} defaultValue={location.pathname === "/movies" ? inputTitleMovies : inputTitleMoviesSave} name="search_input"  placeholder="Фильм" required/>
+          <input className="searchForm__input"  type="search"   onChange={e => location.pathname === "/movies" ? titleMoviesHandler(e) : titleMoviesHandlerSave(e)} defaultValue={location.pathname === "/movies" ? inputTitleMovies : inputTitleMoviesSave} name="search_input"  placeholder="Фильм" required  onBlur={() => location.pathname === "/saved-movies" && setInputTitleMoviesSave('')}/>
           <button className="searchForm__button"  type="submit"  name="search_button"  onClick={location.pathname === "/movies" ? button : buttonSave} aria-label="Кнопка поиска фильма">
             <img className="hoverBatton" src={find} alt="кнопка отправить"/>
           </button>

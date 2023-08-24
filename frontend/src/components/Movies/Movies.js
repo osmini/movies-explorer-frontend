@@ -13,7 +13,9 @@ function Movies(props){
     setMoviesPfilter, 
     setMovies, 
     handleLikeClick,
-    savedMovies
+    savedMovies,
+    setDattonChange,
+    dattonChange
   } = props;
 
   return (
@@ -35,6 +37,8 @@ function Movies(props){
           movies = {movies}
           handleLikeClick = {handleLikeClick}
           savedMovies = {savedMovies}
+          setDattonChange = {setDattonChange}
+          dattonChange = {dattonChange}
         />
 
       </section>

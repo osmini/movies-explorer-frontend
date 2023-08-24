@@ -52,7 +52,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  
+  //baseUrl: 'http://localhost:4000/api',
   baseUrl: 'https://osmimesto.nomoredomains.work/api',
   headers: {
     'Accept': "application/json",

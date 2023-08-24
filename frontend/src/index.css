@@ -124,7 +124,10 @@
 @import url(./components/MoviesCard/moviesCard.css);
   @import url(./components/MoviesCard/__img/moviesCard__img.css);
   @import url(./components/MoviesCard/__button/moviesCard__button.css);
+    @import url(./components/MoviesCard/_active/button_active.css);
+    @import url(./components/MoviesCard/_add/button_add.css);
   @import url(./components/MoviesCard/_dell/button_dell.css);
+  @import url(./components/MoviesCard/_dell-active/button_dell-active.css);
   @import url(./components/MoviesCard/__info/moviesCard__info.css);
     @import url(./components/MoviesCard/__info/__info-title/moviesCard__info-title.css);
     @import url(./components/MoviesCard/__info/__info-duration/moviesCard__info-duration.css);

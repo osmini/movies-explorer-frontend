@@ -73,8 +73,8 @@ class ApiAuth {
 }
 
 const apiAuth = new ApiAuth({ 
+  //baseUrl: 'http://localhost:4000/api',
   baseUrl: 'https://osmimesto.nomoredomains.work/api',
-
   headers: {
     'Accept': "application/json",
     'Content-Type': 'application/json'

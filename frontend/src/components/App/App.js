@@ -21,6 +21,8 @@ import MainApi from '../../utils/MainApi';
 // Импортируем объект кloggenInsetUserDataонтекста
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 
+import { IMG_URL } from '../../data/data';
+
 function App() {
 
   const [tooltipPopupOpen, setTooltipPopupOpen] = useState(false);   // открытие попапа
@@ -78,7 +80,7 @@ function App() {
       setLoggenIn(true);
       setUserName(data.user.name);
       setUserEmail(data.user.email);
-      navigate('/');
+      navigate('/movies');
     })
     .catch(() => {
       const result = {
@@ -125,9 +127,7 @@ function App() {
       });
 
     localStorage.removeItem('shortMovies');
-    localStorage.removeItem('shortMoviesSave');
     localStorage.removeItem('inputTitleMovies');
-    localStorage.removeItem('inputTitleMoviesSave');
     localStorage.removeItem('movies');
 
     setInputTitleMovies('');
@@ -166,23 +166,15 @@ function App() {
   useEffect(() => {
     if (loggenIn) {
       const savedShortMovies = JSON.parse(localStorage.getItem('shortMovies'));
-      const savedShortMoviesSave = JSON.parse(localStorage.getItem('shortMoviesSave'));
       const savedInputTitleMovies = localStorage.getItem('inputTitleMovies');
-      const savedInputTitleMoviesSave = localStorage.getItem('inputTitleMoviesSave');
       const searhMovaes = (JSON.parse(localStorage.getItem('movies')));
     
       // Проверяем, есть ли сохраненные данные в localStorage
       if (savedShortMovies) {
         setShortMovies(savedShortMovies);
       }
-      if (savedShortMoviesSave) {
-        setShortMoviesSave(savedShortMoviesSave);
-      }
       if (savedInputTitleMovies) {
         setInputTitleMovies(savedInputTitleMovies);
-      }
-      if (savedInputTitleMoviesSave) {
-        setInputTitleMoviesSave(savedInputTitleMoviesSave);
       }
       if (searhMovaes) {
         setMovies(searhMovaes);
@@ -194,38 +186,39 @@ function App() {
   useEffect(() => {
     if (loggenIn) {
       localStorage.setItem('shortMovies', shortMovies);
-      localStorage.setItem('shortMoviesSave', shortMoviesSave);
     }
   }, [loggenIn, shortMovies, shortMoviesSave]);
 
   useEffect(() => {
     if (loggenIn) {
       localStorage.setItem('inputTitleMovies', inputTitleMovies);
-      localStorage.setItem('inputTitleMoviesSave', inputTitleMoviesSave);
     }
-  }, [loggenIn, inputTitleMovies, inputTitleMoviesSave]);
+  }, [loggenIn, inputTitleMovies]);
 
   //api получить все фильмы из яндекс
-  function getMoviesFromApi(){
-    
+  function getMoviesFromApi() {
     setPreloder(true);
   
-    MoviesApi.getMovies()
-    .then((movies) => {
-      if ('inputTitleMovies' in localStorage) {
-        setInputTitleMovies(localStorage.getItem('inputTitleMovies'));
-      }
-      if (inputTitleMovies !== ""){
-        setMovies(movies);
-        localStorage.setItem('movies', JSON.stringify(movies));
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-    .finally(() =>
-    setPreloder(false)); // завершаем загрузку 
+    const storedMovies = JSON.parse(localStorage.getItem('movies'));
+  
+    if (storedMovies) {
+      setMovies(storedMovies);
+      setPreloder(false);
+    } else {
+      MoviesApi.getMovies()
+        .then((movies) => {
+          if (inputTitleMovies !== "") {
+            setMovies(movies);
+            localStorage.setItem('movies', JSON.stringify(movies));
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => setPreloder(false));
+    }
   }
+  
   
   //фильтр фильмов api
   useEffect(() => {
@@ -292,9 +285,9 @@ function App() {
           duration: movie.duration,
           year: movie.year,
           description: movie.description,
-          image: 'https://api.nomoreparties.co' + movie.image.url,
+          image: IMG_URL + movie.image.url,
           trailerLink: movie.trailerLink,
-          thumbnail: 'https://api.nomoreparties.co' + movie.image.formats.thumbnail.url,
+          thumbnail: IMG_URL + movie.image.formats.thumbnail.url,
           movieId: movie.id,
           nameRU: movie.nameRU,
           nameEN: movie.nameEN,
@@ -383,33 +376,33 @@ function App() {
 
       <Route path="/signup" element={
         loggenIn ? <Navigate to="/" /> : (
-          <Login
-            name = 'registr'
-            title = 'Добро пожаловать!'
-            buttonTitle = 'Зарегистрироваться'
-            text = 'Уже зарегистрированы?'
-            textLink = 'Войти'
-            urlLink = '/signin'
-            handleRegistr = {handleRegistr}
-            formValid = {formValid}
-            setFormValid = {setFormValid}
-          />
+        <Login
+          name = 'registr'
+          title = 'Добро пожаловать!'
+          buttonTitle = 'Зарегистрироваться'
+          text = 'Уже зарегистрированы?'
+          textLink = 'Войти'
+          urlLink = '/signin'
+          handleRegistr = {handleRegistr}
+          formValid = {formValid}
+          setFormValid = {setFormValid}
+        />
         )
       }/>
 
       <Route path="/signin" element={
         loggenIn ? <Navigate to="/" /> : (
-          <Login
-            name = 'avtorize'
-            title = 'Рады видеть!'
-            buttonTitle = 'Войти'
-            text = 'Ещё не зарегистрированы?'
-            textLink = 'Регистрация'
-            urlLink = '/signup'
-            handleLogin = {handleLogin}
-            formValid = {formValid}
-            setFormValid = {setFormValid}
-          />
+        <Login
+          name = 'avtorize'
+          title = 'Рады видеть!'
+          buttonTitle = 'Войти'
+          text = 'Ещё не зарегистрированы?'
+          textLink = 'Регистрация'
+          urlLink = '/signup'
+          handleLogin = {handleLogin}
+          formValid = {formValid}
+          setFormValid = {setFormValid}
+        />
         )
       }/>
 
@@ -474,7 +467,9 @@ function App() {
       }/>
 
       <Route path="*" element= {
-        <NotPage />
+        <NotPage 
+          loggenIn={loggenIn} 
+        />
       }/>   
 
     </Routes>

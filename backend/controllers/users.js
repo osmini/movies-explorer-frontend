@@ -92,7 +92,7 @@ const login = (req, res, next) => {
         res.cookie('jwt', token, {
           maxAge: 6604800,
           httpOnly: false,
-          sameSite: true,
+          sameSite: false,
           secure: true,
         });
         return res.status(200).send({ message: 'Успешный вход в систему', user: userToSend});

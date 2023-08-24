@@ -1,3 +1,5 @@
+import { IMG_URL } from '../data/data';
+
 // api получить фильмы от яндекс
 class MoviesApi {
   constructor({ baseUrl, headers }) {
@@ -24,7 +26,7 @@ class MoviesApi {
 }
 
 const moviesApi = new MoviesApi({
-  baseUrl: 'https://api.nomoreparties.co',
+  baseUrl: IMG_URL,
   headers: {
     'Accept': "application/json",
     'Content-Type': 'application/json'

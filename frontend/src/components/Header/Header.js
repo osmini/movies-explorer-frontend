@@ -8,7 +8,7 @@ import Burger  from '../Burger/Burger';
 
 
 function Header(props){
-  const {loggenIn, userEmail, onSignOut} = props;
+  const {loggenIn} = props;
 
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [buttonHeader, setButtonHeader] = useState('');
@@ -28,7 +28,7 @@ function Header(props){
   // состояние кнопки входа/выхода из учетки
   useEffect(()=>{
     if (loggenIn) {
-      setButtonHeader('Выйти');
+      setButtonHeader('Аккаунт');
     } else {
       setButtonHeader('Войти');
     }
@@ -43,9 +43,9 @@ function Header(props){
       {loggenIn &&  <Navigation />}
 
       <nav className="header__menu">
-          {location.pathname === "/" &&   <Link  to={!loggenIn ? ('/signup'): ('/profile')}  className="header__menu-login hoverBatton">{loggenIn ? userEmail: 'Регистрация'}</Link>}
+          {location.pathname === "/" &&   <Link  to={!loggenIn ? ('/signup'): ('/profile')}  className="header__menu-login hoverBatton">{!loggenIn && 'Регистрация'}</Link>}
           {location.pathname === "/" ? (
-          <Link  to={!loggenIn ? ('/signin'): ('/')} className="header__menu-link hoverBatton" onClick={loggenIn ? onSignOut : null} >{buttonHeader}</Link>):
+          <Link  to={!loggenIn ? ('/signin'): ('/profile')} className={!loggenIn ? ("header__menu-link hoverBatton") : ("header__menu-link header__menu-link-active hoverBatton")} >{buttonHeader}</Link>):
           (
             <Link  to='/profile' className="header__menu-link header__menu-link-active hoverBatton">Аккаунт</Link>
           )}
