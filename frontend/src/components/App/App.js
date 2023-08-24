@@ -57,7 +57,8 @@ function App() {
         registr: true
       };
       handleTooltipPopupOpen(result);
-      navigate('/signin');
+      setLoggenIn(true);
+      navigate('/movies');
       setRegAnsve('Вы успешно зарегистрировались!');
       setFormValid(true);
     })
