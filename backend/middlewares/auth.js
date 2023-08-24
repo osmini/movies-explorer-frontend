@@ -12,7 +12,6 @@ module.exports = (req, res, next) => {
 
   if (!token){
     token = req.headers.authorization.split(' ')[1];
-    console.log(token);
   }
 
   // убеждаемся, что он есть
