@@ -1,0 +1,17 @@
+.button_add {
+  width: 21px;
+  height: 21px;
+
+  right: -42%;
+  top: -81%;
+  
+  background-color: #EE3465;
+  background-image: url('../../../images/icon__add.svg');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  visibility: visible;
+  opacity: 1;
+}
+

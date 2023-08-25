@@ -16,6 +16,10 @@
   color: #fff;
 
   cursor: pointer;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s linear;
 }
 
 @media screen and (max-width: 1000px) {

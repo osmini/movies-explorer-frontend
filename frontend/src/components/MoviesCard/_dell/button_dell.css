@@ -1,0 +1,18 @@
+.button_dell {
+  width: 21px;
+  height: 21px;
+
+  right: -42%;
+  top: -80%;
+
+  background-color: #313131;
+  background-image: url('../../../images/icon__dell.svg');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s linear;
+}
+

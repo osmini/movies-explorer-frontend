@@ -8,6 +8,14 @@
 /*Preloader*/
 @import url(./components/Preloader/Preloader.css);
 
+/*InfoTooltip*/
+@import url(./components/InfoTooltip/InfoTooltip.css);
+  @import url(./components/InfoTooltip/__close-button/InfoTooltip__close-button.css);
+  @import url(./components/InfoTooltip/__eddit-form/InfoTooltip__eddit-form.css);
+  @import url(./components/InfoTooltip/__infotooltip-image/InfoTooltip__infotooltip-image.css);
+  @import url(./components/InfoTooltip/__infotooltip-message/InfoTooltip__infotooltip-message.css);
+  @import url(./components/InfoTooltip/_active/InfoTooltip_active.css);
+
 /*filterCheckbox*/
 @import url(./components/FilterCheckbox/filterCheckbox.css);
   @import url(./components/FilterCheckbox/__wrapper/filterCheckbox__wrapper.css);
@@ -110,11 +118,16 @@
 @import url(./components/MoviesCardList/moviesCardList.css);
   @import url(./components/MoviesCardList/__wrapper/moviesCardList__wrapper.css);
   @import url(./components/MoviesCardList/__button/moviesCardList__button.css);
+  @import url(./components/MoviesCardList/__notFiand/moviesCardList__notFiand.css);
 
 /*moviesCard*/
 @import url(./components/MoviesCard/moviesCard.css);
   @import url(./components/MoviesCard/__img/moviesCard__img.css);
   @import url(./components/MoviesCard/__button/moviesCard__button.css);
+    @import url(./components/MoviesCard/_active/button_active.css);
+    @import url(./components/MoviesCard/_add/button_add.css);
+  @import url(./components/MoviesCard/_dell/button_dell.css);
+  @import url(./components/MoviesCard/_dell-active/button_dell-active.css);
   @import url(./components/MoviesCard/__info/moviesCard__info.css);
     @import url(./components/MoviesCard/__info/__info-title/moviesCard__info-title.css);
     @import url(./components/MoviesCard/__info/__info-duration/moviesCard__info-duration.css);
@@ -129,6 +142,7 @@
       @import url(./components/Profile/__error/profile__error.css);
       @import url(./components/Profile/__date/profile__date.css);
     @import url(./components/Profile/__button-edit/profile__button-edit.css);
+      @import url(./components/Profile/__button-edit/_inactive/profile__button_inactive.css);
   @import url(./components/Profile/__button-out/profile__button-out.css);
 
 /*login*/

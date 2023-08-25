@@ -1,0 +1,13 @@
+.moviesCardList__notFiand {
+  padding-top: 40px;
+  margin: 0 auto;
+
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 320px) {
+  .moviesCardList__notFiand {
+    font-size: 14px;
+  }
+}

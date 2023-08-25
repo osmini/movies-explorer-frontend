@@ -14,8 +14,7 @@
   border: none;
   border-radius: 8px;
 
-  outline:none;
-
+  outline: none;
 }
 
 .login__form-input::placeholder {

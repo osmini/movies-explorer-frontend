@@ -1,0 +1,9 @@
+.InfoTooltip__infotooltip-image {
+  padding-top: 30px;
+}
+
+@media (max-width: 768px ) {
+  .InfoTooltip__infotooltip-image {
+    padding-top: 20px;
+  }
+}
