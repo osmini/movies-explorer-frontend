@@ -37,10 +37,28 @@ const createUser = (req, res, next) => {
       bcrypt.hash(password, Number(SALT_ROUNDS), (err, hash) => User.create({
         name, email, password: hash
       })
-        .then((newUser) => res.status(201).send({
-          email: newUser.email,
-          name: newUser.name,
-        }))
+        .then((newUser) => {
+          // создаем и отдаем токен
+          const token = jwt.sign(
+            { _id: newUser._id },
+            NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+            { expiresIn: '7d' },
+          );
+
+          // Api и front находятся на разных доменах
+          // secure: true отпрака куки только по https
+          res.cookie('jwt', token, {
+            maxAge: 6604800,
+            httpOnly: false,
+            sameSite: true,
+            secure: true,
+          });
+          const userToSend = {
+            name: newUser.name,
+            email: newUser.email,
+          };
+          return res.status(200).send({ message: 'Успешный вход в систему', user: userToSend});
+        })
         .catch((err) => {
           console.log(err);
           if (err.name === 'ValidationError') {

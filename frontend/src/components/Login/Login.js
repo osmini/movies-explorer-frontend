@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Link, useLocation} from 'react-router-dom'; // импортируем Routes
 
-import { rexEmail } from '../../data/data';
+import { REX_EMAIL } from '../../data/data';
 
 import logo from '../../images/logo.svg';
 
@@ -61,7 +61,7 @@ function Login (props){
   const emailHandler = (e) => {
     setEmailImput(e.target.value);
 
-    if (!rexEmail.test(e.target.value)){
+    if (!REX_EMAIL.test(e.target.value)){
       setEmailError('Некорректный email');
     } else {
       setRegisterEmail(e.target.value);

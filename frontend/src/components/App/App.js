@@ -51,15 +51,17 @@ function App() {
   // запрос на регистрацию
   function handleRegistr(registerName, registerEmail, registerPassword){
     ApiAuth.postRegistrUser(registerName, registerEmail, registerPassword)
-    .then(() =>{
+    .then((data) =>{
+      setLoggenIn(true);
+      setUserName(data.user.name);
+      setUserEmail(data.user.email);
       const result = {
         popup: true,
         registr: true
       };
-      handleTooltipPopupOpen(result);
-      setLoggenIn(true);
       navigate('/movies');
       setRegAnsve('Вы успешно зарегистрировались!');
+      handleTooltipPopupOpen(result);
       setFormValid(true);
     })
     .catch(() => {
@@ -71,7 +73,6 @@ function App() {
       setRegAnsve('Что-то прошло не так! Попробуйте ещё раз.');
       setFormValid(true);
     })
-    
   }
 
   // запрос  на авторизацию
@@ -79,6 +80,7 @@ function App() {
     ApiAuth.postAutoriseUser(registerEmail, registerPassword)
     .then((data) =>{
       setLoggenIn(true);
+      console.log();
       setUserName(data.user.name);
       setUserEmail(data.user.email);
       navigate('/movies');
@@ -104,6 +106,10 @@ function App() {
       ApiAuth.getCheakTokenUser()
       .then((data) =>{
         if(data){
+          if (!loggenIn){
+            localStorage.setItem('shortMovies', false);
+            localStorage.setItem('inputTitleMovies', '');
+          }
           setUserName(data.name);
           setUserEmail(data.email);
           navigate(location.pathname);

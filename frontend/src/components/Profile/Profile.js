@@ -2,6 +2,8 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import {useLocation} from 'react-router-dom'; // импортируем Routes
 
+import { REX_EMAIL } from '../../data/data';
+
 function Profile(props){
 
   const {userName, userEmail, onSignOut, handleUpdateUser} = props;
@@ -13,8 +15,6 @@ function Profile(props){
   const [nameError, setNameError] = useState('Имя не может быть пустым');
   const [emailError, setEmailError] = useState('Емайл не может быть пустым');
   const [formValid, setFormValid] = useState(false);
-
-  const rexEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/;
 
   // подписка на новигацию
   const location = useLocation();
@@ -43,13 +43,13 @@ function Profile(props){
 
   // доступ к кнопки при валидации
   useEffect(() => {
-    if (!rexEmail.test(emailImput)){
+    if (!REX_EMAIL.test(emailImput)){
       setEmailError('Некорректный email');
     }
     if (emailImput === userEmail){
       setEmailError('Введенный email совпадает с вашим прежним email');
     } 
-    if (emailImput != userEmail && rexEmail.test(emailImput)) {
+    if (emailImput != userEmail && REX_EMAIL.test(emailImput)) {
       setEmailError('');
     }
     if (nameImput.length < 2 || nameImput.length > 8) {

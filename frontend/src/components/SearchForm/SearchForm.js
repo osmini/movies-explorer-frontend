@@ -29,7 +29,7 @@ function SearchForm(props){
       setInputTitleMoviesSave('');
       setShortMoviesSave(false);
     }
-  }, [location.pathname]); // пустой массив зависимостей для выполнения эффекта только при первичном монтировании
+  }, [location.pathname]); 
 
   //получаем данные из инпута 
   const titleMoviesHandler = (e) => {
@@ -44,9 +44,9 @@ function SearchForm(props){
 
   //получаем данные из инпута страницы сохраненки
   const titleMoviesHandlerSave = (e) => {
-
+    console.log(e.target.value);
     setInputTitleMoviesSave(e.target.value);
-    
+
     if (e.target.value === ''){
       setMoviesPfilterSave([]);
       //setMovies([]);
@@ -56,7 +56,7 @@ function SearchForm(props){
   //отмена отправки формы 
   const button = (e) => {
     e.preventDefault();
-    
+    console.log(inputTitleMoviesSave);
     if (inputTitleMovies.trim() === '') {
       setInputError('Поиск не может быть пустым');
       setMoviesPfilter([]);
@@ -69,7 +69,6 @@ function SearchForm(props){
   //отмена отправки формы сохраненых фильмов
   const buttonSave = (e) => {
     e.preventDefault();
-
     if (inputTitleMoviesSave.trim() === '') {
       setInputError('Поиск не может быть пустым');
     } else {
@@ -82,7 +81,7 @@ function SearchForm(props){
     <section className="searchForm">
       <form className="searchForm__form" name='search_movies'>
         <div className="searchForm__wrapper">
-          <input className="searchForm__input"  type="search"   onChange={e => location.pathname === "/movies" ? titleMoviesHandler(e) : titleMoviesHandlerSave(e)} defaultValue={location.pathname === "/movies" ? inputTitleMovies : inputTitleMoviesSave} name="search_input"  placeholder="Фильм" required  onBlur={() => location.pathname === "/saved-movies" && setInputTitleMoviesSave('')}/>
+          <input className="searchForm__input"  type="search"   onChange={e => location.pathname === "/movies" ? titleMoviesHandler(e) : titleMoviesHandlerSave(e)} defaultValue={location.pathname === "/movies" ? inputTitleMovies : ''} name="search_input" placeholder="Фильм" required />
           <button className="searchForm__button"  type="submit"  name="search_button"  onClick={location.pathname === "/movies" ? button : buttonSave} aria-label="Кнопка поиска фильма">
             <img className="hoverBatton" src={find} alt="кнопка отправить"/>
           </button>

@@ -9,6 +9,8 @@ pull request: https://github.com/osmini/movies-explorer-frontend/pull/2
 
 IP-адрес 158.160.79.196
 
+МАКЕТ dark-2 
+
 Frontend https://osmimesto.nomoredomains.work/
 
 Backend https://osmimesto.nomoredomains.work/api/
